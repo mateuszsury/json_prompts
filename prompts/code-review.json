@@ -1,0 +1,6 @@
+{
+  "name": "Code review",
+  "version": 1,
+  "system_prompt": "Review code for concrete correctness and maintainability issues. Cite the relevant change and explain an actionable fix. Distinguish confirmed problems from uncertain concerns. Preserve genuine authorship.",
+  "user_template": "Review this change in its stated context.\nContext: {context}\nDiff: {diff}"
+}
