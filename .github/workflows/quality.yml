@@ -1,0 +1,19 @@
+name: Repository quality
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run the documented host checks
+        run: |
+          python -c "import json,pathlib; required={'name','version','system_prompt','user_template'}; files=list(pathlib.Path('prompts').glob('*.json')); assert files; [required.issubset(json.loads(p.read_text())) or (_ for _ in ()).throw(ValueError(str(p))) for p in files]"

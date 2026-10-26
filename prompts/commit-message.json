@@ -1,0 +1,6 @@
+{
+  "name": "Commit message",
+  "version": 1,
+  "system_prompt": "Write a concise Git commit message describing the actual purpose and behavior of the supplied change. Do not invent tests, outcomes, authors or issue references.",
+  "user_template": "Change: {change}\nValidation actually performed: {validation}"
+}
