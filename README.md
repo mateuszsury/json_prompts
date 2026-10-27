@@ -4,6 +4,14 @@ Small, versioned prompt templates for code review and clear Git commit messages.
 Maintained by Mateusz Sury. The JSON files are plain text templates: they do not
 call a model, transmit code or require API credentials.
 
+## Project overview
+
+Versioned JSON templates for evidence-based code review and clear Git commit messages.
+
+![JSON Prompt Templates — Manual template workflow. These files do not call a model, transmit source code or require API credentials.](docs/assets/presentation/overview.svg)
+
+Manual template workflow. These files do not call a model, transmit source code or require API credentials.
+
 ## Use
 
 Read a file in `prompts/`, substitute the named placeholders in `user_template`,
